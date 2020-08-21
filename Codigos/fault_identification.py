@@ -127,7 +127,7 @@ def carregaResultadosFalhas(zone, percent):
     
     return lista
 
-def fault_ident(params, zone, percent):
+def fault_identification(params, zone, percent):
 
     global dataset
     

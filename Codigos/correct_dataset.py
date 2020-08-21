@@ -59,9 +59,7 @@ def validarFaixa(inicio, fim, col):
           
 def carrega_faixa():
     identColunas()
-    #Definindo valores das faixas de análise
-    #Foi definido: 50
-    #Passível de alteração no futuro
+    
     for collumn in dataset:
         start = 0
         faixa = 50

@@ -64,41 +64,13 @@ def selecionaMetodo(value):
                 else:
                     return 'Media'
 
-# def validarMetodo(inicio, fim, col):
-
-#     faixa = fim-inicio
-#     countSource = 0
-#     countLines = 0
-
-#     for i in range(inicio, fim, 1):
-#         if(pd.isnull(dataset.iloc[i,col])):
-#             countSource += 1
-    
-#     for i in range(inicio, fim, 1):
-#         bol = False
-#         for collumn in dataset:
-#             if bol == False:
-#                 if(pd.isnull(dataset.loc[i,collumn]) and collumn not in notinteresting):
-#                     countLines += 1
-#                     bol = True
-    
-#     if countSource == countLines and countSource < faixa:
-#         return True
-
-#     return False
-
 def carregaListaMetodos(lista_dados):
 
     lista_metodos = []
 
     for value in lista_dados:
         metodo = selecionaMetodo(value)
-        # if metodo == 'SVM' or metodo == 'RLM':
-        #     valid = validarMetodo(value.begin_faixa, value.end_faixa, value.indice)
-
-        #     if valid == False:
-        #         metodo = 'Media'
-                
+    
         lista_metodos.append(Tipo_Metodo(value.indice, value.begin_faixa, value.end_faixa, metodo))
 
     return lista_metodos
